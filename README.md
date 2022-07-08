@@ -46,7 +46,7 @@ what action the vehicle must perform.
 
 (Codes processed with [URH](https://github.com/jopohl/urh) and were provided by [REDACTED]. Thanks, [REDACTED]!)
 
-## *CONFIRMED* Vehicles (despite the fact that this likely affects them all):
+## Confirmed *Working* Vehicles (while this does not affect all releases, CVE-2021-46145 probably does):
 
 • 2009 Acura TSX
 
@@ -58,6 +58,10 @@ what action the vehicle must perform.
 
 • 2020 Honda Civic LX
 
+## Conrfirmed *Failed* vehicles:
+
+• 2018 Honda Accord EX-L (confirmed with flipperzero - 433.92 MHz AM650)
+
 
 ## The Interesting Part
 Honda seemingly ignored [CVE-2019-20626](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-20626) (cited above in the list of confirmed, affected vehicles). They continued to implement 0 security measures against
@@ -65,10 +69,7 @@ this very simple "replay/replay and edit" attack. This CVE interestingly only ci
 research. Honda will not respond to me, or seemingly anyone attempting to report this security MAJOR flaw.
 
 ## How Honda Can Fix This
-Honda must implement a "rolling code" system into their vehicles' list of security measures. Rolling code systems have been around since 1995 and
-work very well against hackers. Honda has seemingly never implemented this security measure, leaving them very far behind in the race toward a secure
-technological future. As far as I can tell, this isn't easily "patchable". Honda can begin to implement security measures in future vehicles, however
-it doesn't seem likely that they will go back and fix this security issue in older models.
+Honda tried implementing a "rolling code" system to their keyfobs on varios make/models to prevent this type of replay attack. Rolling code systems have been around since 1995 and work very well against hackers. Honda has seemingly implemented this security measure randomly on their vehicles while using a rolling code system on others with no clear dilineation as to why. This leaves a lot of Honda vehicles vulnerable when they didn't need to be. As far as I can tell, this isn't easily "patchable". And even if they were to push the rolling code system out, that too is vulnerable now, [CVE-2021-46145](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-46145).
 
 ## Epilogue
 I am very interested in community feedback! Feel free to contact me with more research, information, or questions!
